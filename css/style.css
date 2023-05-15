@@ -45,7 +45,17 @@ body {
     display: flex;
     align-items: center;
     padding: 20px;
+    transition: background-color 300ms ease;
 }
+
+.todolist .wrapper-list ul.list li:hover {
+    background-color: #323b5c;
+}
+
+.todolist .wrapper-list ul.list li:hover button.remove{
+    opacity: 1;
+}
+
 
 .todolist .wrapper-list ul.list .check {
     background-color: #404a6e;
@@ -75,11 +85,35 @@ body {
     color: #fafafa;
     cursor: pointer;
     font-weight: bold;
+    opacity: 0;
+    transition: opacity 300ms ease;
+}
+
+.todolist .wrapper-list ul.list button.remove:after {
+    content: 'x';
+    display: block;
+    color: #fafafa;
 }
 
 
 
 .todolist .wrapper-list ul.list .task {
     color: #fafafa;
+}
+
+.todolist footer {
+    background-color: #171d37;
+}
+
+.todolist footer input{
+    background-color: #171d37;
+    padding: 20px;
+    border: none;
+    outline: none;
+    width: 90%;
+    font-family: 'Roboto Condensed', Arial, Helvetica, sans-serif;
+    font-size: 1.2em;
+    color: #fafafa;
+
 }
 
