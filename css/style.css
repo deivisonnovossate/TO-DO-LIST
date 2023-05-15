@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&family=Roboto:wght@100;300;400;500;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #121212;
+    font-family: "Roboto Condensed", Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+}
+
+
+.todolist {
+    width: 100%;
+    max-width: 600px;
+}
+
+.todolist header {
+    padding: 20px;
+    background-color: #de3f53;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    color: #fafafa;
+    font-size: 1.3em;
+}
+
+.todolist .wrapper-list ul.list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.todolist .wrapper-list ul.list li {
+    position: relative;
+    background-color: #262e4c;
+    border-bottom: 1px solid #1c2340;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.todolist .wrapper-list ul.list .check {
+    background-color: #404a6e;
+    border-radius: 50%;
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin-right: 20px;
+    cursor: pointer;
+    transition: background-color 300ms ease;
+}
+
+.todolist .wrapper-list ul.list .check:hover {
+    background-color: #171d37;
+}
+
+.todolist .wrapper-list ul.list button.remove {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    background-color: red;
+    color: #fafafa;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+
+
+.todolist .wrapper-list ul.list .task {
+    color: #fafafa;
+}
+
