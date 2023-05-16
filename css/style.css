@@ -56,6 +56,16 @@ body {
     opacity: 1;
 }
 
+.todolist .wrapper-list ul.list li.removed {
+    animation: collapseItem 300ms ease;
+}
+
+.todolist .wrapper-list ul.list li.hidden {
+    display: none;
+}
+
+
+
 
 .todolist .wrapper-list ul.list .check {
     background-color: #404a6e;
@@ -135,3 +145,13 @@ body {
 
 }
 
+
+@keyframes collapseItem {
+    0%{
+        transform: rotateX(0deg);
+    }
+
+    100% {
+        transform: rotateX(-90deg);
+    }
+}
