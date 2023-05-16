@@ -12,14 +12,14 @@ const Main = {
     // cacheSelectors -> responsável por selecionar os elementos de html e armazenar em uma variável´
     cacheSelectors: function(){
         //selecionando os elementos em html
-        this.checkButtons = document.querySelectorAll('.check')
+        this.$checkButtons = document.querySelectorAll('.check')
     },
     // bindEvents -> Responsável por chamar nossos eventos
     bindEvents: function(){
         //Hack para pegar o this
         const self = this
         //Como vamos ter vários buttons, precisamos percorrer eles no array com forEach
-       this.checkButtons.forEach(function(button){
+       this.$checkButtons.forEach(function(button){
             button.onclick = self.Events.checkButtons_click
        })
     },
@@ -27,8 +27,17 @@ const Main = {
 
     // Vamos deixar separado as funções dos eventos aqui
     Events: {
-        checkButtons_click: function(){
-            //Adicionado class no html
+        checkButtons_click: function(e){
+            // Chegando no elemento LI
+            const li = e.target.parentElement
+            const isDone = li.classList.contains('done')
+
+            // Usando as boas práticas
+           if(!isDone){
+            return li.classList.add('done')
+           }
+
+           li.classList.remove('done')
         }
     },
 }

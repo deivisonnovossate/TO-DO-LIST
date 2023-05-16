@@ -66,10 +66,28 @@ body {
     margin-right: 20px;
     cursor: pointer;
     transition: background-color 300ms ease;
+    position: relative;
 }
 
-.todolist .wrapper-list ul.list .check:hover {
+.todolist .wrapper-list ul.list .check:hover,
+.todolist .wrapper-list ul.list .done .check {
     background-color: #171d37;
+}
+
+.todolist .wrapper-list ul.list .done .check:after {
+    display: block;
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: green;
+    border-radius: 50%;
+    position: absolute;
+    top: 5px;
+    left: 5px;;
+}
+
+.todolist .wrapper-list ul.list .done .task {
+    text-decoration: line-through;
 }
 
 .todolist .wrapper-list ul.list button.remove {
